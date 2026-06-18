@@ -1,0 +1,43 @@
+<Window x:Class="ShopProducts.Pages.ServiceEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Услуга" Height="350" Width="400" WindowStartupLocation="CenterOwner"
+        ShowInTaskbar="False" ResizeMode="NoResize">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Название:" VerticalAlignment="Center"/>
+        <TextBox x:Name="NameBox" Grid.Column="1" Margin="0,0,0,10"/>
+
+        <TextBlock Grid.Row="1" Text="Описание:" VerticalAlignment="Center"/>
+        <TextBox x:Name="DescriptionBox" Grid.Row="1" Grid.Column="1" Height="60" 
+                 TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10"/>
+
+        <TextBlock Grid.Row="2" Text="Цена:" VerticalAlignment="Center"/>
+        <TextBox x:Name="PriceBox" Grid.Row="2" Grid.Column="1" Margin="0,0,0,10"/>
+
+        <TextBlock Grid.Row="3" Text="Категория:" VerticalAlignment="Center"/>
+        <ComboBox x:Name="CategoryBox" Grid.Row="3" Grid.Column="1" SelectedIndex="0" Margin="0,0,0,10">
+            <ComboBoxItem Content="Продажа"/>
+            <ComboBoxItem Content="Аренда"/>
+            <ComboBoxItem Content="Консультация"/>
+        </ComboBox>
+
+        <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" 
+                    HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="Сохранить" Width="100" Margin="0,0,10,0" Click="BtnSave_Click" Height="25"/>
+            <Button Content="Отмена" Width="100" Click="BtnCancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

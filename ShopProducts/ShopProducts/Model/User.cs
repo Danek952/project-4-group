@@ -21,5 +21,11 @@ namespace ShopProducts.Model
         public bool Block { get; set; } = false;
 
         public bool FirstAuth { get; set; } = false;
+
+        public string LastName { get; set; } = string.Empty;
+
+        public string FirstName { get; set; } = string.Empty;
+
+        public string Patronymic { get; set; } = string.Empty;
     }
 }
